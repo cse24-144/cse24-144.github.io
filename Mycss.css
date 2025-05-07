@@ -1,0 +1,218 @@
+@font-face{
+    font-family: 'Mantinia Regular';
+    src: url('Fonts/Mantinia\ Regular.otf')
+format('truetype');
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Mantinia Regular', serif;
+    background-color: #000000;
+    color: goldenrod;
+    padding-top: 150px;
+    background-image: url('Images/elden\ ring\ bg\ Home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
+}
+footer{
+    background-color: black;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 100px;
+    border-top: 2px solid grey;
+    border-top-right-radius: 3%;
+    border-top-left-radius: 3%;
+}
+nav{
+    background-color: black;
+    padding: 20px;
+    border-bottom: 2px solid rgba(255, 217, 0, 0.562);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    height:fit-content;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -40px;
+}
+nav ul li{
+    list-style-type: none;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+nav img{
+  margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+nav img:hover{
+  transform: scale(1.1);
+}
+nav ul button{
+  color: goldenrod;
+  background-color: #3f3f3f;
+  border-color: #ffdc4170;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+nav ul button:hover{
+  transform: scale(1.1);
+  background-color: #302f2d;
+  color: rgb(255, 183, 2);
+}
+p img{
+  display: flex;
+  justify-content: left;
+}
+h2 a{
+  text-decoration: none;
+  color:none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+h2 a:hover{
+  border-color: rgba(255, 255, 255, 0.26);
+}
+.border-gold{
+  border: 1px solid #bfa14d;
+  box-shadow: 0 0 5px #bfa14d;
+}
+.features{
+  border-top: 2px solid goldenrod;
+  border-bottom: 1px solid goldenrod; 
+  background-image: url(Images/elden\ ring\ bg\ ER\ features.jpg);
+  background-attachment: fixed;
+}
+.praisewall{
+  border-top: 1px solid goldenrod;
+  border-bottom: 2px solid goldenrod; 
+  background-image: url(Images/elden\ ring\ bg\ ER\ praise\ wall.jpg);
+  background-attachment: fixed;
+}
+.praisewallDLC{
+  border-top: 1px solid #8B0000 ;
+  border-bottom: 2px solid #8B0000; 
+  background-image: url(Images/elden\ ring\ bg\ DLC\ praise\ wall.png);
+  background-attachment: fixed;
+}
+.newstuff{
+  border-top: 2px solid #8B0000;
+  border-bottom: 1px solid #8B0000; 
+  background-image: url(Images/elden\ ring\ bg\ DLC\ new\ stuff.png);
+  background-attachment: fixed;
+}
+.glow {
+  color: #fff;
+  text-shadow: 0 0 8px #0ff, 0 0 16px #0ff, 0 0 24px #0ff;
+}
+.glowDLC{
+  color: #fff;
+  text-shadow: 0 0 8px #8B0000, 0 0 16px #8B0000, 0 0 24px #8B0000;
+}
+.textVisible{
+  background-color: rgb(0, 0, 0, 0.9);
+  border-radius: 6px;
+  
+}
+.Logo{
+    color: goldenrod;
+    font-weight: bold;
+    font-size: xx-large;
+    padding-left: 20px;
+}
+.inline-video {
+  width: 640px;     
+  height: 360px; 
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0;   
+  overflow: hidden;
+  border-radius: 12px; 
+  box-shadow: 0 0px 12px rgba(235, 231, 231, 0.2);
+}
+
+.inline-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.flex{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  @media (max-width: 768px) {
+
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .inline-video{
+      width: 400px;     
+      height: 225px;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+      max-height: 0;                 
+      transition: max-height 0.4s ease-out;
+    }
+  
+    .nav-links.active {
+      max-height: 500px;           
+      transition: max-height 0.4s ease-in;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
+  
+
